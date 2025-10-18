@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voice Library</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>📚 Voice Library</h1>
+    <p>Type a book name or click 🎤 to use your voice!</p>
+
+    <input type="text" id="bookInput" placeholder="Enter book name">
+    <button onclick="borrowBook()">Borrow</button>
+    <button onclick="useVoice()">🎤</button>
+
+    <p id="response"></p>
+
+    <script>
+        async function borrowBook() {
+            const book = document.getElementById('bookInput').value;
+            const res = await fetch('/borrow', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ book })
+            });
+            const data = await res.json();
+            document.getElementById('response').innerText = data.message;
+        }
+
+        async function useVoice() {
+            const res = await fetch('/borrow', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ book: 'voice' })
+            });
+            const data = await res.json();
+            document.getElementById('response').innerText = data.message;
+        }
+    </script>
+</body>
+</html>
+

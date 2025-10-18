@@ -1,7 +1,10 @@
 [
   {"title": "Pride and Prejudice", "author": "Jane Austen"},
   {"title": "Harry Potter and the Sorcerer's Stone", "author": "J.K. Rowling"},
-  {"title": "To Kill a Mockingbird", "author": "Harper Lee"}
+  {"title": "To Kill a Mockingbird", "author": "Harper Lee"},
+  {"title": "Atomic Habits", "author": "James Clear"},
+  {"title": "Deep Work", "author": "Cal Newport"},
+  {"title": "Clean Code", "author": "Robert C. Martin"}
 ]
 
 
