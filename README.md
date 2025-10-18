@@ -1,18 +1,23 @@
-# Voice Library 📚🎙️
+# Voice Library
 
-A voice-controlled library assistant built with Python that allows students to borrow books using speech commands.
+Voice Library is a voice-controlled application that allows users to borrow books using speech commands. This project demonstrates a practical use of speech recognition and text-to-speech in Python, designed as a prototype for real-world library systems.
 
 ## Features
-- Speak the name of a book to borrow it.
-- Confirms whether the book is available.
-- Exit anytime by saying "exit", "quit", or "bye".
-- Loops for multiple borrow requests.
-- Built using Python, SpeechRecognition, and pyttsx3 for text-to-speech.
+- Voice-controlled book borrowing
+- Checks if the requested book exists in the library
+- Provides spoken confirmation for successful or failed requests
+- Exit the app by saying "exit", "quit", or "bye"
 
-## How to Run
-1. Clone this repository:
+## How It Works
+1. The user runs the application.
+2. The app asks: "Which book would you like to borrow? Say 'exit', 'quit', or 'bye' to quit."
+3. The user speaks the book title.
+4. The app confirms if the book is available and marks it as borrowed.
+5. The user can continue borrowing or exit.
 
-```bash
-git clone https://github.com/iradukundabrenda/VoiceLibrary.git
-cd VoiceLibrary/app
+## Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/iradukundabrenda/VoiceLibrary.git
+   cd VoiceLibrary
 
